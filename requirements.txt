@@ -2,4 +2,4 @@ streamlit
 faiss-cpu
 sentence-transformers
 pandas
-openai
+openai==0.28
