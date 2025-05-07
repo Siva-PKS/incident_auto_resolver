@@ -4,10 +4,7 @@ import os
 import smtplib
 from email.message import EmailMessage
 import streamlit as st
-from dotenv import load_dotenv
 
-# Load environment variables (if using .env locally)
-load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY", st.secrets.get("openai_api_key"))
 
 # Function to find exact match from past tickets (CSV)
