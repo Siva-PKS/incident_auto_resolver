@@ -15,11 +15,11 @@ if st.button("Resolve Ticket"):
             st.success("✅ Exact match found!")
             st.write("**Resolution:**", match['resolution'])
 
-            send_outlook_email(
-                to_email=match['email'],
-                issue_description=match['description'],
-                resolution=match['resolution']
-            )
+            send_email(
+                    subject=f"Issue Resolved: {match['description']}",
+                     body=f"Here is the resolution:\n\n{match['resolution']}",
+                    to_email=match['email']
+)
             st.info("📧 Auto-reply email sent via Outlook.")
         else:
             st.warning("No exact match found. Generating suggestion via LLM...")
