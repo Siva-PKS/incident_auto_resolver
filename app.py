@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import find_exact_match, send_outlook_email, generate_llm_resolution
+from utils import find_exact_match, send_email, generate_llm_response
 
 st.title("🎫 Incident Auto-Resolver with LLM Fallback")
 
