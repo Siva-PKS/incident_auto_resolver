@@ -5,7 +5,7 @@ import smtplib
 from email.message import EmailMessage
 import streamlit as st
 
-openai.api_key = st.secrets.get("openai_api_key")
+openai.api_key = st.secrets["openai_api_key"]
 
 # Function to find an exact match in a CSV of past tickets
 def find_exact_match(description, csv_path='data/tickets.csv'):
